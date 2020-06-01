@@ -1,6 +1,13 @@
 Symfony 3.4
 ========================
 
+Stack:
+
+    Symfony 3.4
+    Doctrine with SQLite3
+    Twig
+    PHP 7.0
+
 Install symfony 3.4.x 
 
     $ composer create-project symfony/framework-standard-edition lilly "3.4.*"
