@@ -23,7 +23,10 @@ Run application
 
     $ php bin/console server:run
         
+AddressBook URL :
 
+    $ http://127.0.0.1:8000/addressbook/
+    
 Author:
 
     Selim Reza
