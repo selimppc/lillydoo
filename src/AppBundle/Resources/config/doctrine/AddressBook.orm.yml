@@ -1,0 +1,50 @@
+AppBundle\Entity\AddressBook:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\AddressBookRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: '32'
+            nullable: true
+        lastName:
+            type: string
+            length: '32'
+            nullable: true
+        streetNumber:
+            type: string
+            length: 255
+            nullable: true
+        zip:
+            type: integer
+            nullable: true
+        city:
+            type: string
+            length: '32'
+            nullable: true
+        country:
+            type: string
+            length: '32'
+            nullable: true
+        phoneNumber:
+            type: string
+            length: '32'
+            nullable: true
+        birthDay:
+            type: datetime
+            nullable: true
+        emailAddress:
+            type: string
+            length: '64'
+            nullable: true
+        picture:
+            type: string
+            length: '128'
+            nullable: true
+    lifecycleCallbacks: {  }

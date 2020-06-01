@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Addressbook</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ addressBook.id }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ addressBook.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ addressBook.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Streetnumber</th>
+                <td>{{ addressBook.streetNumber }}</td>
+            </tr>
+            <tr>
+                <th>Zip</th>
+                <td>{{ addressBook.zip }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ addressBook.city }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ addressBook.country }}</td>
+            </tr>
+            <tr>
+                <th>Phonenumber</th>
+                <td>{{ addressBook.phoneNumber }}</td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td>{% if addressBook.birthDay %}{{ addressBook.birthDay|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Emailaddress</th>
+                <td>{{ addressBook.emailAddress }}</td>
+            </tr>
+            <tr>
+                <th>Picture</th>
+                <td><img src="{{ asset('uploads/' ~ addressBook.picture)}}" width="200" style="border: 1px solid rebeccapurple"/></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('addressbook_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('addressbook_edit', { 'id': addressBook.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
