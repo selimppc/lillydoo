@@ -10,7 +10,7 @@ Stack:
 
 Install symfony 3.4.x 
 
-    $ composer create-project symfony/framework-standard-edition lilly "3.4.*"
+    $ composer create-project symfony/framework-standard-edition lillydoo "3.4.*"
     
 Sqlite path:
 
